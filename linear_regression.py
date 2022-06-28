@@ -39,15 +39,11 @@ sess.run(init)
 
 for step in range(100):
     _, l, pred = sess.run([train_op, loss, y_hat])
-    if step % 5 == 0:
+    if step % 2 == 0:
         plt.cla()
         plt.scatter(x, y)
         plt.plot(x, pred, 'r-', lw=5)
         plt.pause(0.1)
 
 plt.show()
-
-
-
-
 
