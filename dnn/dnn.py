@@ -4,11 +4,6 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
-
-
-
 # 定义数据预处理的转换操作
 transform = transforms.Compose([
     transforms.ToTensor(),  # 将图像转换为张量, 将ndarray数组转换为Tensor数据类型
